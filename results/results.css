@@ -1,0 +1,193 @@
+/* RESET & BODY */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Roboto',sans-serif;
+  background:#f4f6f8;
+  color:#333;
+  line-height:1.6;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px
+}
+
+/* SEARCH CARD */
+.search-card{
+  max-width:500px;
+  width:100%;
+  background:#ffffff;
+  padding:40px 30px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 8px 24px rgba(0,0,0,0.1);
+  border:1px solid #e0e0e0
+}
+.search-card .logo-search{width:80px;margin-bottom:15px}
+.search-card h2{margin-bottom:20px;font-size:22px;color:#1565c0}
+
+.input-row{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:15px;
+  text-align:left;
+}
+.input-row label{
+  font-weight:500;
+  margin-bottom:5px;
+}
+.input-row input, .input-row select{
+  width:100%;
+  padding:12px;
+  border:1px solid #bbb;
+  border-radius:8px;
+  font-size:15px;
+  outline:none;
+}
+.input-row input:focus, .input-row select:focus{
+  border-color:#42a5f5;
+  background:#fff;
+}
+
+.search-card button{
+  background:#1e88e5;
+  color:white;
+  border:none;
+  padding:14px 30px;
+  font-size:15px;
+  font-weight:600;
+  border-radius:8px;
+  cursor:pointer
+}
+.search-card button:hover{background:#1565c0}
+
+.error-card{
+  margin-top:15px;
+  padding:10px;
+  background:#ffcdd2;
+  color:#b71c1c;
+  border-radius:6px
+}
+
+/* RESULT CONTAINER */
+.result-container{
+  max-width:800px;
+  width:100%;
+  margin:50px auto;
+  background:#ffffff;
+  padding:40px 40px 60px;
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.1);
+  border:1px solid #ddd;
+  display:none
+}
+header{text-align:center;margin-bottom:25px}
+header .logo{width:70px;margin-bottom:10px}
+header h1{font-size:26px;font-weight:700;color:#1565c0}
+header .sub-title{font-size:14px;color:#777;margin-bottom:5px}
+header .result-date{font-size:13px;color:#999;margin-bottom:8px}
+header hr{border:0;height:1px;background:#ddd;margin-top:10px}
+
+/* STUDENT INFO */
+.student-info{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  background:#fafafa;
+  border:1px solid #ddd;
+  padding:18px 20px;
+  border-radius:10px;
+  margin-bottom:28px;
+  font-size:15px;
+  color:#333
+}
+.student-info div strong{color:#1565c0}
+
+/* RESULTS TABLE */
+.results h2{font-size:18px;margin-bottom:12px;color:#1565c0;font-weight:600;text-align:center}
+.results table{width:100%;border-collapse:collapse;margin-bottom:28px}
+.results th,.results td{
+  padding:13px 16px;
+  border:1px solid #ccc;
+  text-align:left;
+  font-size:15px;
+  color:#333
+}
+.results th{background:#e3f2fd;color:#1565c0;font-weight:600}
+.results tr:nth-child(even){background:#f5f5f5}
+
+/* SUMMARY CARDS */
+.summary h2{margin-bottom:18px;color:#1565c0;font-size:18px;font-weight:600;text-align:center}
+.summary-grid{display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
+.summary-card{
+  flex:1 1 180px;
+  background:#fafafa;
+  border:1px solid #ddd;
+  padding:18px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05)
+}
+.summary-card h3{font-size:15px;margin-bottom:10px;color:#1565c0;font-weight:600}
+.summary-card p{font-size:20px;font-weight:bold;color:#333}
+
+/* ACTIONS */
+.actions{text-align:center;margin-top:15px}
+.actions button{
+  background:#1e88e5;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  font-size:14px;
+  font-weight:600;
+  border-radius:8px;
+  cursor:pointer;
+  margin:5px
+}
+.actions button:hover{background:#1565c0}
+
+/* FOOTER */
+footer{text-align:center;font-size:12px;color:#777;margin-top:20px}
+footer .watermark{font-style:italic;color:#aaa;font-size:11px;margin-top:6px}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .search-card, .result-container {
+    padding: 30px 20px;
+  }
+  .search-card h2, header h1 {
+    font-size: 20px;
+  }
+  .results th, .results td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  .summary-card {
+    flex: 1 1 140px;
+    padding: 15px;
+  }
+  header .logo {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-card, .result-container {
+    padding: 20px 15px;
+  }
+  .search-card h2, header h1 {
+    font-size: 18px;
+  }
+  .results th, .results td {
+    font-size: 13px;
+    padding: 8px 6px;
+  }
+  .summary-card {
+    flex: 1 1 100%;
+    padding: 12px;
+  }
+  .actions button {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
